@@ -25,14 +25,14 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
     assert valid_vector_shape
 
     recursion_depth +=1
-    std_dev  = np.sqrt(delta * t / alpha)
-    dim      = x.shape[0]
-    y        = std_dev * torch.randn(int_samples, dim, device=device) 
-    y        = y + x.permute(1,0)
-    exp_term = torch.exp(-f(y) * (alpha / delta)) 
+    std_dev = np.sqrt(delta * t / alpha)
+    dim     = x.shape[0]
+    y       = std_dev * torch.randn(int_samples, dim, device=device) 
+    y       = y + x.permute(1,0)
+    z       = -f(y) * (alpha / delta)
 
-    underflow = exp_term <= tol
-    underflow_freq = float(underflow.sum()) / underflow.shape[0]
+    underflow         = torch.exp(z)  <= tol
+    underflow_freq    = float(underflow.sum()) / underflow.shape[0]
     observe_underflow = underflow_freq > tol_underflow
 
     if observe_underflow: 
@@ -42,12 +42,9 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
                                alpha_decay=alpha_decay, tol=tol, 
                                tol_underflow=tol_underflow, device=device,
                                verbose=verbose)         
-    else:
-        v_delta   = torch.mean(exp_term)
-        numerator = y * exp_term.view(int_samples, 1)
-        numerator = torch.mean(numerator, dim=0)        
-        prox_term = numerator / v_delta
-        HJ_prox   = prox_term.view(-1, 1) 
+    else:                
+        soft_max = torch.nn.Softmax(dim=1)  
+        HJ_prox  = soft_max(z.permute(1,0)).mm(y)   
 
         valid_prox_shape = HJ_prox.shape == x.shape
         assert valid_prox_shape
@@ -56,7 +53,7 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         assert prox_is_finite 
 
         if verbose:
-            envelope = - (delta / alpha) * torch.log(v_delta)
+            envelope = - (delta / alpha) * torch.log(torch.mean(torch.exp(z)))
             return HJ_prox, recursion_depth, envelope
         else:
             return HJ_prox
