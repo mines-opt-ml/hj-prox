@@ -3,7 +3,8 @@ import numpy as np
 
 def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
                     recursion_depth=0, alpha_decay=0.631, tol=1.0e-6, 
-                    tol_underflow=0.9, device='cpu', verbose=False):
+                    tol_underflow=0.9, device='cpu', verbose=False,
+                    return_samples=False):
     ''' Estimate proximals from function value sampling via HJ-Prox Algorithm.
 
         Notes:
@@ -41,7 +42,7 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
                                alpha=alpha, recursion_depth=recursion_depth,
                                alpha_decay=alpha_decay, tol=tol, 
                                tol_underflow=tol_underflow, device=device,
-                               verbose=verbose)         
+                               verbose=verbose, return_samples=return_samples)         
     else:                
         soft_max = torch.nn.Softmax(dim=1)  
         HJ_prox  = soft_max(z.permute(1,0)).mm(y)   
@@ -55,5 +56,7 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         if verbose:
             envelope = - (delta / alpha) * torch.log(torch.mean(torch.exp(z)))
             return HJ_prox, recursion_depth, envelope
+        elif return_samples:
+            return HJ_prox, y, alpha
         else:
             return HJ_prox
