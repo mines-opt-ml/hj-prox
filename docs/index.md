@@ -4,6 +4,4 @@
 
 <br>
 
-### Code License
-
 {!LICENSE!}
