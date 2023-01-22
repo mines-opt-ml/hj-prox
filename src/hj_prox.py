@@ -7,30 +7,17 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
                     return_samples=False):
     """ Estimate proximals from function value sampling via HJ-Prox Algorithm.
 
-        :param kind: vector $x$
+        :param kind: vector x
         :type kind: Tensor
-        :param kind: time $t > 0$
+        
+        :param kind: time t > 0
         :type kind: Tensor
-        :param kind: function $f$
+        
+        :param kind: function f
         :type kind: function
         
-        :return: Estimate of the proximal of $f$ at $x$
+        :return: Estimate of the proximal of f at x
         :rtype: Tensor
-
-        Notes:
-            Input is a single vector "x" of size (dim, 1)    
-
-            Proximal computation does *not* handle case for f with negative
-            values. That case must be handled by adding an offset and is
-            omitted her since all our functions of interest are nonnegative.
-
-            The computation for the proximal involves the exponential of a
-            potentially large negative number, which can result in underflow
-            in floating point arithmetic that renders a grossly inaccurate 
-            proximal calculation. To avoid this, the "large negative number" 
-            is reduced in size by using a smaller value of alpha, returning 
-            a result once the underflow is not considered significant
-            (as defined by the tolerances "tol" and "tol_underflow").
     """
     valid_vector_shape = x.shape[1] == 1 and x.shape[0] >= 1
     assert valid_vector_shape
