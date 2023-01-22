@@ -1,4 +1,6 @@
-# A Hamilton-Jacobi-based Proximal Operator (**[arXiv Link](https://arxiv.org/abs/2211.12997)**)
+# A Hamilton-Jacobi-based Proximal Operator 
+
+This repository provides the code for our paper ([arXiv Link](https://arxiv.org/abs/2211.12997)).
 
 ## Abstract
 
