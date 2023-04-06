@@ -23,7 +23,7 @@
 
 !!! quote "Citation"
     ```
-    @article{osher2022hamilton,
+    @article{osher2023hamilton,
              title={{A Hamilton-Jacobi-based proximal operator}},
              author={Osher, Stanley and Heaton, Howard and Fung, Samy Wu},
              journal={{Proceedings of the National Academy of Sciences}},
