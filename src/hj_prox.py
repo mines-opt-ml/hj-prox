@@ -20,8 +20,10 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         significant (as defined by the tolerances "tol" and "tol_underflow").
 
         Usage Example:
+            '''
             foo = ClassFoo()
             bar = foo.FunctionBar()
+            '''
 
         Args:
             x (tensor): Input vector
