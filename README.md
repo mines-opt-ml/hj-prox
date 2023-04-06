@@ -1,5 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Documentation Status](https://readthedocs.org/projects/docs-hj-prox/badge/?version=latest)](https://docs-hj-prox.readthedocs.io/en/latest/?badge=latest)
+![Docs](https://github.com/mines-opt-ml/hj-prox/actions/workflows/ci.yml/badge.svg)
+
 
 # A Hamilton-Jacobi-based Proximal Operator 
 
