@@ -3,6 +3,11 @@ site_name: A Hamilton-Jacobi-based Proximal Operator
 plugins:
   - search
   - mkdocstrings
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: false
   - mkdocs-jupyter:
       theme: dark
 
