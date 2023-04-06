@@ -85,7 +85,7 @@ nav:
     - 'Overview': 'index.md'
     - 'Experiments':
         - 'Proximal Comparisons': 'exp-prox-comparisons.md'
-        - 'L1 + Least Squares': 'exp-ista.ipynb'
+        - 'L1 + Least Squares': 'exp-l1-least-squares.md'
         - 'Noisy Oracle + Constraints': 'exp-oracle-constraints.md'
     - 'Tutorial':
         - 'Tutorial': 'tutorial.ipynb'
