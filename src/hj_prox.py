@@ -11,11 +11,17 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         overall description of the module or program.  Optionally, it may also
         contain a brief description of exported classes and functions and/or usage
         examples.
+        
+        The computation for the proximal involves the exponential of a potentially
+        large negative number, which can result in underflow in floating point
+        arithmetic that renders a grossly inaccurate proximal calculation. To avoid
+        this, the "large negative number" is reduced in size by using a smaller
+        value of alpha, returning a result once the underflow is not considered
+        significant (as defined by the tolerances "tol" and "tol_underflow").
 
-        Typical usage example:
-
-          foo = ClassFoo()
-          bar = foo.FunctionBar()
+        Usage Example:
+            foo = ClassFoo()
+            bar = foo.FunctionBar()
 
         Args:
             x (tensor): Input vector
