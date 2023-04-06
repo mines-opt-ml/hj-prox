@@ -13,7 +13,7 @@
 
 <figure markdown>
 <img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="600"/>
-<figcaption>Image caption</figcaption>
+<figcaption>Example of HJ-Prox algorithm using an increasing number of samples to form an estimate (green dot) of the proximal (red dot). Samples $\mathsf{y^i}$ are drawn from a Gaussian distribution centered at $\mathsf{x}$, and a convex combination of these samples is used to get the estimate, with the weight of each sample a function of the objective value $\mathsf{f(y^i)}$.</figcaption>
 </figure>
 
 
