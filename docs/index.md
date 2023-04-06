@@ -11,6 +11,13 @@
 [Reprint :fontawesome-solid-file-lines:](https://www.pnas.org/doi/10.1073/pnas.2220469120){ .md-button .md-button--primary }
 [Slides :fontawesome-solid-file-image:](assets/hj-prox-slides.pdf){ .md-button .md-button--primary }
 
+
+<figure markdown>
+  ![HJ-Prox Animation](assets/hj-prox-animation.gif){ width="300" }
+  <figcaption>Example of HJ-Prox algorithm using an increasing number of samples to form an estimate (green dot) of the proximal (red dot). Samples $\mathsf{y^i}$ are drawn from a Gaussian distribution centered at $\mathsf{x}$, and a convex combination of these samples is used to get the estimate, with the weight of each sample a function of the objective value $\mathsf{f(y^i)}$.</figcaption>
+</figure>
+
+
 !!! abstract "Abstract"
 
     First-order optimization algorithms are widely used today. Two standard building blocks in these algorithms are proximal operators (proximals) and gradients. Although gradients can be computed for a wide array of functions, explicit proximal formulas are known for only limited classes of functions. We provide an algorithm, HJ-Prox, for accurately approximating such proximals. This is derived from a collection of relations between proximals, Moreau envelopes, Hamilton–Jacobi (HJ) equations, heat equations, and Monte Carlo sampling. In particular, HJ-Prox smoothly approximates the Moreau envelope and its gradient. The smoothness can be adjusted to act as a denoiser. Our approach applies even when functions are accessible only by (possibly noisy) black box samples. We show that HJ-Prox is effective numerically via several examples.
