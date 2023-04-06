@@ -21,8 +21,8 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
 
         Usage Example:
             '''
-            foo = ClassFoo()
-            bar = foo.FunctionBar()
+                foo = ClassFoo()
+                bar = foo.FunctionBar()
             '''
 
         Args:
