@@ -18,4 +18,4 @@ A Hamilton-Jacobi-based proximal operator ([arXiv Link](https://arxiv.org/abs/22
       year={2022}
     }
 
-**See the [documentation side](https://hj-prox.research.typal.academy) for more details.**
+See the [documentation side](https://hj-prox.research.typal.academy) for more details.
