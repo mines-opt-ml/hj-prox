@@ -12,7 +12,7 @@ First-order optimization algorithms are widely used today. Two standard building
 
 A Hamilton-Jacobi-based proximal operator ([arXiv Link](https://arxiv.org/abs/2211.12997)).
     
-    @article{osher2022hamilton,
+    @article{osher2023hamilton,
              title={{A Hamilton-Jacobi-based proximal operator}},
              author={Osher, Stanley and Heaton, Howard and Fung, Samy Wu},
              journal={{Proceedings of the National Academy of Sciences}},
