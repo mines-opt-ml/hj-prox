@@ -1,0 +1,44 @@
+/* Light mode */
+[data-md-color-scheme="slate"] {
+
+  --md-primary-bg-color: #d3d9f3;
+  --md-default-bg-color: #555b75;
+  --md-primary-fg-color: #7086DF;  
+
+  --md-default-bg-color--light:    var(--md-primary-bg-color);
+  --md-default-bg-color--lighter:  var(--md-primary-bg-color);
+  --md-default-bg-color--lightest: var(--md-primary-bg-color);
+
+  --md-default-fg-color--light:    var(--md-primary-fg-color);
+  --md-default-fg-color--lighter:  var(--md-primary-fg-color);
+  --md-default-fg-color--lightest: var(--md-primary-fg-color);
+  --md-default-fg-color--dark:     var(--md-primary-fg-color);
+  
+  --md-typeset-color:      var(--md-primary-bg-color);
+  --md-typeset-a-color:    var(--md-typeset-color);
+  --md-typeset-mark-color: var(--md-typeset-color); 
+
+  --md-admonition-fg-color: var(--md-typeset-color);
+  --md-admonition-bg-color:#606782;  
+
+    /* Primary color shades */
+    --md-primary-bg-color--light: var(--md-typeset-color);
+    --md-text-link-color:         var(--md-typeset-color);
+
+    /* Accent color shades */
+    --md-accent-fg-color: #5e72c1;
+    --md-accent-fg-color--transparent: var(--md-typeset-color);
+    --md-accent-bg-color:              var(--md-typeset-color);
+    --md-accent-bg-color--light:       var(--md-typeset-color);   
+
+  /* Code block color shades */
+  --md-code-bg-color: #333950;
+  --md-code-fg-color: var(--md-primary-bg-color);
+
+  /* Footer */
+  --md-footer-bg-color:        var(--md-primary-fg-color);
+  --md-footer-bg-color--dark:  var(--md-primary-fg-color);
+  --md-footer-fg-color: hsla(0, 0%, 100%, 1);
+  --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-footer-fg-color--lighter: hsla(0, 0%, 100%, 0.3);
+}
