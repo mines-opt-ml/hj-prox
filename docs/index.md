@@ -17,6 +17,8 @@
     <img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="500"/>
 </center>
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/778967515?h=57c80f74a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Hamilton-Jacobi-based Proximal Operator"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 !!! abstract "Abstract"
 
     First-order optimization algorithms are widely used today. Two standard building blocks in these algorithms are proximal operators (proximals) and gradients. Although gradients can be computed for a wide array of functions, explicit proximal formulas are known for only limited classes of functions. We provide an algorithm, HJ-Prox, for accurately approximating such proximals. This is derived from a collection of relations between proximals, Moreau envelopes, Hamilton–Jacobi (HJ) equations, heat equations, and Monte Carlo sampling. In particular, HJ-Prox smoothly approximates the Moreau envelope and its gradient. The smoothness can be adjusted to act as a denoiser. Our approach applies even when functions are accessible only by (possibly noisy) black box samples. We show that HJ-Prox is effective numerically via several examples.
