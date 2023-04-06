@@ -7,6 +7,16 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
                     return_samples=False):
     """ Estimate proximals from function value sampling via HJ-Prox Algorithm.
 
+        Leave one blank line.  The rest of this docstring should contain an
+        overall description of the module or program.  Optionally, it may also
+        contain a brief description of exported classes and functions and/or usage
+        examples.
+
+        Typical usage example:
+
+          foo = ClassFoo()
+          bar = foo.FunctionBar()
+
         Args:
             x (tensor): Input vector
             t (tensor): Time > 0
