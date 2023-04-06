@@ -1,8 +1,6 @@
-# A Hamilton-Jacobi-based Proximal Operator 
-
-This repository provides the code for our paper ([arXiv Link](https://arxiv.org/abs/2211.12997)).
-
 [![Documentation Status](https://readthedocs.org/projects/docs-hj-prox/badge/?version=latest)](https://docs-hj-prox.readthedocs.io/en/latest/?badge=latest)
+
+# A Hamilton-Jacobi-based Proximal Operator 
 
 ## Abstract
 
@@ -10,7 +8,9 @@ First-order optimization algorithms are widely used today. Two standard building
 
 **See the [Typal Research page](https://research.typal.llc/zeroth-order-methods/hj-prox) for an overview of the algorithm.**
 
-Please cite as
+## Publication
+
+A Hamilton-Jacobi-based proximal operator ([arXiv Link](https://arxiv.org/abs/2211.12997)).
     
     @article{osher2022hamilton,
       title={A Hamilton-Jacobi-based Proximal Operator},
