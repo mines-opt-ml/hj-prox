@@ -2,7 +2,7 @@
 [data-md-color-scheme="slate"] {
 
   --md-primary-bg-color: #d3d9f3;
-  --md-default-bg-color: #555b75;
+  --md-default-bg-color: #494f65;
   --md-primary-fg-color: #7086DF;  
 
   --md-default-bg-color--light:    var(--md-primary-bg-color);
@@ -19,7 +19,7 @@
   --md-typeset-mark-color: var(--md-typeset-color); 
 
   --md-admonition-fg-color: var(--md-typeset-color);
-  --md-admonition-bg-color:#606782;  
+  --md-admonition-bg-color:#535971;  
 
     /* Primary color shades */
     --md-primary-bg-color--light: var(--md-typeset-color);
