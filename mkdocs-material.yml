@@ -1,0 +1,96 @@
+site_name: A Hamilton-Jacobi-based Proximal Operator
+
+plugins:
+  - search
+  - mkdocstrings
+  - mkdocs-jupyter:
+      theme: dark
+
+extra_css:
+  - stylesheets/extra.css   
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+  icon:
+    logo: material/math-integral-box  
+    repo: fontawesome/brands/github      
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - toc.integrate
+    - navigation.top
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+
+# Github Repo
+repo_name: mines-opt-ml/hj-prox
+repo_url: https://github.com/mines-opt-ml/hj-prox
+
+extra:
+  social:
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/TypalAcademy  
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/TypalAcademy
+    - icon: fontawesome/brands/vimeo
+      link: https://vimeo.com/TypalAcademy    
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/@TypalAcademy    
+  consent:
+    title: Cookie Consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: false
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true  
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+    - 'Overview': 'index.md'
+    - 'Experiments':
+        - 'Proximal Comparisons': 'exp-prox-comparisons.md'
+        - 'L1 + Least Squares': 'exp-ista.ipynb'
+        - 'Noisy Oracle + Constraints': 'exp-oracle-constraints.md'
+    - 'Tutorial':
+        - 'Tutorial': 'tutorial.ipynb'
+
+copyright: |
+  &copy; 2023 <a href="https://research.typal.academy"  target="_blank" rel="noopener">Typal Academy LLC</a>
+  <br>
+  <a href="#__consent">Cookie Settings</a>
