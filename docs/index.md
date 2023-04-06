@@ -11,9 +11,9 @@
 [Reprint :fontawesome-solid-file-lines:](https://www.pnas.org/doi/10.1073/pnas.2220469120){ .md-button .md-button--primary }
 [Slides :fontawesome-solid-file-image:](assets/hj-prox-slides.pdf){ .md-button .md-button--primary }
 
-
-
-![HJ-Prox Animation](assets/hj-prox-animation.gif)
+<center>
+<img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="300"/>
+</center>
 
 
 !!! abstract "Abstract"
