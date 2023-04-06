@@ -11,11 +11,9 @@
 [Reprint :fontawesome-solid-file-lines:](https://www.pnas.org/doi/10.1073/pnas.2220469120){ .md-button .md-button--primary }
 [Slides :fontawesome-solid-file-image:](assets/hj-prox-slides.pdf){ .md-button .md-button--primary }
 
-<figure markdown>
-<img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="600"/>
-<figcaption>Example of HJ-Prox algorithm using an increasing number of samples to form an estimate (green dot) of the proximal (red dot). Samples $\mathsf{y^i}$ are drawn from a Gaussian distribution centered at $\mathsf{x}$, and a convex combination of these samples is used to get the estimate, with the weight of each sample a function of the objective value $\mathsf{f(y^i)}$.</figcaption>
-</figure>
-
+<center>
+    <img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="500"/>
+</center>
 
 !!! abstract "Abstract"
 
