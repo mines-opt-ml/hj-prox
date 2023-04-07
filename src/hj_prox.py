@@ -7,6 +7,13 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
                     return_samples=False):
     """ Estimate proximals from function value sampling via HJ-Prox Algorithm.
 
+        The output computes
+        
+        :math:`\text{prox}_{tf}(x)`
+        
+        where :math:`x` is the input, :math:`A` is the ``weight`` parameter, :math:`b` is the
+        optional ``bias`` parameter, and :math:`y` is the output.
+
         Numerical Consideration: 
             The computation for the proximal involves the exponential of a potentially
             large negative number, which can result in underflow in floating point
