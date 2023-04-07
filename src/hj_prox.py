@@ -43,6 +43,12 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
             t (tensor): Time > 0
             f: Function to minimize
 
+        Shape:
+            - Input: :math:`(*, H_{in})`, where :math:`*` represents any number of
+              dimensions (including none) and :math:`H_{in} = \text{in\_features}`.
+            - Output: :math:`(*, H_{out})`, where all but the last dimension
+              match the input shape and :math:`H_{out} = \text{out\_features}`.
+
         Returns:
             tensor: Estimate of the proximal of f at x
     """
