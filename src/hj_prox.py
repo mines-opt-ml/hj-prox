@@ -13,6 +13,10 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         
         where :math:`x` is the input, :math:`A` is the ``weight`` parameter, :math:`b` is the
         optional ``bias`` parameter, and :math:`y` is the output.
+        
+        - [x] Sample points $\mathsf{y^i}$ (via a Gaussian) about the input $\mathsf{x}$
+        - [x] Evaluate function $\mathsf{f}$ at each point $\mathsf{y^i}$
+        - [x] Estimate proximal by using softmax to combine the values for $\mathsf{f(y^i)}$ and $\mathsf{y^i}$            
 
         Numerical Consideration: 
             The computation for the proximal involves the exponential of a potentially
