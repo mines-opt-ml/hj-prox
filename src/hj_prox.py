@@ -10,12 +10,12 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         The output estimates the proximal:
         
         $$
-            f(y) + \dfrac{1}{2t} | y - x |^2,
+            \mathsf{ prox_{tf}(x) = \underset{y}{argmin} f(y) + \dfrac{1}{2t} | y - x |^2 },
         $$
             
         where $\mathsf{x}$ = `x` is the input, $\mathsf{t}$=`t` is the time parameter, 
-        and $\mathsf{f}$=`f` is the function of interest.
-        The process for this approximation is as follows.
+        and $\mathsf{f}$=`f` is the function of interest. The process for this 
+        approximation is as follows.
         
         - [x] Sample points $\mathsf{y^i}$ (via a Gaussian) about the input $\mathsf{x}$
         - [x] Evaluate function $\mathsf{f}$ at each point $\mathsf{y^i}$
