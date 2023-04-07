@@ -11,7 +11,7 @@ extra_css:
 
 theme:
   name: material
-  favicon: assets/typalacademy.ico
+  favicon: typalacademy.ico
   palette:
     scheme: slate
   icon:
@@ -71,6 +71,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  - pymdownx.pathconverter
   - pymdownx.tasklist:
       custom_checkbox: true  
   - pymdownx.emoji:
@@ -87,7 +88,7 @@ nav:
     - 'Core Function': 'hj-prox.md'
     - 'Experiments':
         - 'L1 + Least Squares': 'exp-l1-least-squares.md'
-        - 'Proximal Comparisons': '../src.run_prox_comparison.ipynb'
+        - 'Proximal Comparisons': 'run_prox_comparison.ipynb'
         - 'Noisy Oracle + Constraints': 'exp-oracle-constraints.md'        
 
 copyright: |
