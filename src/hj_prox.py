@@ -27,6 +27,10 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
             significant (as defined by the tolerances "tol" and "tol_underflow").
             Utilizing a scaling trick with proximals, this is mitigated by using
             recursive function calls.
+            
+        Warning:
+            Memory errors can occur if too many layers of recursion are used,
+            which can happen with tiny delta and large f(x). 
 
         Args:
             x (tensor): Input vector
