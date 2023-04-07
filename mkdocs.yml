@@ -87,7 +87,7 @@ nav:
     - 'Core Function': 'hj-prox.md'
     - 'Experiments':
         - 'L1 + Least Squares': 'exp-l1-least-squares.md'
-        - 'Proximal Comparisons': "../src/run_prox_comparison.ipynb"
+        - 'Proximal Comparisons': '../src.run_prox_comparison.ipynb'
         - 'Noisy Oracle + Constraints': 'exp-oracle-constraints.md'        
 
 copyright: |
