@@ -8,7 +8,9 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
     """ Estimate proximals from function value sampling via HJ-Prox Algorithm.
 
         The output computes
-        $ prox_{tf}(x) = f(y) + \frac{1}{2t} | y - x |^2, $
+        .. math::
+            prox_{tf}(x) = f(y) + \frac{1}{2t} | y - x |^2,
+            
         where $\mathsf{x}$ = `x` is the input, $\mathsf{t}$=`t` is the time parameter, 
         and $\mathsf{f}$=`f` is the function of interest.
         The process for this approximation is as follows.
