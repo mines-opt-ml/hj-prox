@@ -1,5 +1,4 @@
 site_name: A Hamilton-Jacobi-based Proximal Operator
-site_favicon: typalacademy.ico
 
 plugins:
   - search
@@ -12,6 +11,7 @@ extra_css:
 
 theme:
   name: material
+  favicon: assets/typalacademy.ico
   palette:
     scheme: slate
   icon:
