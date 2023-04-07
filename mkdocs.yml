@@ -6,12 +6,9 @@ plugins:
   - mkdocs-jupyter:
       theme: dark
 
-
-
 # Github Repo
 repo_name: mines-opt-ml/hj-prox
 repo_url: https://github.com/mines-opt-ml/hj-prox
-repo_uri: edit/master/
 
 extra_css:
   - stylesheets/extra.css   
@@ -87,12 +84,12 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-    - 'Overview': 'docs/index.md'
-    - 'Core Function': 'docs/hj-prox.md'
+    - 'Overview': 'index.md'
+    - 'Core Function': 'hj-prox.md'
     - 'Experiments':
-        - 'L1 + Least Squares': 'docs/exp-l1-least-squares.md'
-        - 'Proximal Comparisons': 'src/run_prox_comparison.ipynb'
-        - 'Noisy Oracle + Constraints': 'docs/exp-oracle-constraints.md'        
+        - 'L1 + Least Squares': 'exp-l1-least-squares.md'
+        - 'Proximal Comparisons': 'run_prox_comparison.ipynb'
+        - 'Noisy Oracle + Constraints': 'exp-oracle-constraints.md'        
 
 copyright: |
   &copy; 2023 <a href="https://research.typal.academy"  target="_blank" rel="noopener">Typal Academy LLC</a>
