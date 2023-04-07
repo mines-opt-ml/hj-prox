@@ -18,6 +18,13 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
         - [x] Evaluate function $\mathsf{f}$ at each point $\mathsf{y^i}$
         - [x] Estimate proximal by using softmax to combine the values for $\mathsf{f(y^i)}$ and $\mathsf{y^i}$            
 
+        Example:
+            Examples can be given using either the ``Example`` or ``Examples``
+            sections. Sections support any reStructuredText formatting, including
+            literal blocks::
+
+                $ python example_google.py
+
         Numerical Consideration: 
             The computation for the proximal involves the exponential of a potentially
             large negative number, which can result in underflow in floating point
