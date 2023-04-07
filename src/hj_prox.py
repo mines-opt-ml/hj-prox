@@ -9,10 +9,10 @@ def compute_hj_prox(x, t, f, delta=1e-1, int_samples=1000, alpha=2.0,
 
         The output computes
         
-        $\mbox{prox}_{tf}(x) = \mbox{argmin}_y f(y) + \frac{1}{2t} \| y - x \|^2,$
+        $\textsf{prox}_{tf}(x) = \textsf{argmin}_y f(y) + \frac{1}{2t} \| y - x \|^2,$
         
-        where $x$ = `x` is the input, $t$='t' is the time parameter, and $f$='f' is the function
-        of interest.
+        where $\mathsf{x}$ = `x` is the input, $\mathsf{t}$=`t` is the time parameter, 
+        and $\mathsf{f}$=`f` is the function of interest.
         
         - [x] Sample points $\mathsf{y^i}$ (via a Gaussian) about the input $\mathsf{x}$
         - [x] Evaluate function $\mathsf{f}$ at each point $\mathsf{y^i}$
