@@ -2,4 +2,4 @@
 
 ::: src.hj_prox.compute_hj_prox
     options:
-      show_source: false
+      show_root_heading: false
