@@ -1,10 +1,15 @@
 site_name: A Hamilton-Jacobi-based Proximal Operator
+site_description: A formula for estimating proximal operators from (possibly noisy) observations of objective function values
 
 plugins:
   - search
   - mkdocstrings
   - mkdocs-jupyter:
       theme: dark
+  - social:
+      cards_color:
+        fill: "#7086DF" 
+        text: "#FFFFFF"         
 
 # Github Repo
 repo_name: mines-opt-ml/hj-prox
