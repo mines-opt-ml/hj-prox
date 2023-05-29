@@ -2,10 +2,57 @@ import numpy as np
 import torch
 
 def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_iters=0, device='cpu'):
-  ''' 
-      compute prox.
-      input is a single vector x of size (dim x 1)
-  '''
+""" Estimate proximals from function value sampling via HJ-Prox Algorithm.
+
+        The output estimates the proximal:
+        
+        $$
+            \mathsf{prox_{tf}(x) = argmin_y \ f(y) + \dfrac{1}{2t} \| y - x \|^2,}
+        $$
+            
+        where $\mathsf{x}$ = `x` is the input, $\mathsf{t}$=`t` is the time parameter, 
+        and $\mathsf{f}$=`f` is the function of interest. The process for this is 
+        as follows.
+        
+        - [x] Sample points $\mathsf{y^i}$ (via a Gaussian) about the input $\mathsf{x}$
+        - [x] Evaluate function $\mathsf{f}$ at each point $\mathsf{y^i}$
+        - [x] Estimate proximal by using softmax to combine the values for $\mathsf{f(y^i)}$ and $\mathsf{y^i}$            
+
+        Note: 
+            The computation for the proximal involves the exponential of a potentially
+            large negative number, which can result in underflow in floating point
+            arithmetic that renders a grossly inaccurate proximal calculation. To avoid
+            this, the "large negative number" is reduced in size by using a smaller
+            value of alpha, returning a result once the underflow is not considered
+            significant (as defined by the tolerances "tol" and "tol_underflow").
+            Utilizing a scaling trick with proximals, this is mitigated by using
+            recursive function calls.
+            
+        Warning:
+            Memory errors can occur if too many layers of recursion are used,
+            which can happen with tiny delta and large f(x). 
+
+        Args:
+            x (tensor): Input vector
+            t (tensor): Time > 0
+            f: Function to minimize
+
+        Shape:
+            - Input: :math:`(*, H_{in})`, where :math:`*` represents any number of
+              dimensions (including none) and :math:`H_{in} = \text{in\_features}`.
+            - Output: :math:`(*, H_{out})`, where all but the last dimension
+              match the input shape and :math:`H_{out} = \text{out\_features}`.
+
+        Returns:
+            tensor: Estimate of the proximal of f at x
+            
+        Example:
+            Examples can be given using either the ``Example`` or ``Examples``
+            sections. Sections support any reStructuredText formatting, including
+            literal blocks::
+
+                $ python example_google.py            
+    """
   assert(x.shape[1]==1)
   assert(x.shape[0]>=1)
   linesearch_iters +=1
