@@ -36,7 +36,8 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             x (tensor): Input vector
             t (tensor): Time > 0
             f: Function to minimize
-            delta: (float, optional): Smoothing parameter
+            delta (float, optional): Smoothing parameter
+            int_samples (int, optional): Number of samples in Monte Carlo sampling for integral
 
         Shape:
             - Input: :math:`(*, H_{in})`, where :math:`*` represents any number of
@@ -45,7 +46,7 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
               match the input shape and :math:`H_{out} = \text{out\_features}`.
 
         Returns:
-            prox_term: (tensor): Estimate of the proximal of f at x
+            prox_term (tensor): Estimate of the proximal of f at x
             
         Example:
             Examples can be given using either the ``Example`` or ``Examples``
