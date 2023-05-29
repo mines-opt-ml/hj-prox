@@ -38,6 +38,9 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             f: Function to minimize
             delta (float, optional): Smoothing parameter
             int_samples (int, optional): Number of samples in Monte Carlo sampling for integral
+            alpha (float, optional): Scaling parameter for sampling variance
+            linesearch_iters (int, optional): Number of steps used in recursion (used for numerical stability)
+            device (string, optional): Device on which to store variables
 
         Shape:
             - Input: :math:`(*, H_{in})`, where :math:`*` represents any number of
@@ -47,6 +50,8 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
 
         Returns:
             prox_term (tensor): Estimate of the proximal of f at x
+            linesearch_iters (int): Number of steps used in recursion (used for numerical stability)
+            envelope (tensor): Value of envelope function (i.e. infimal convolution) at proximal
             
         Example:
             Examples can be given using either the ``Example`` or ``Examples``
@@ -75,7 +80,7 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
         print('x = ', x)
         print('z = ', z)
         print('w = ', w)
-        alpha = 0.5*alpha
+        alpha *= 0.5
         return compute_prox(x, t, f, delta=delta, int_samples=int_samples, alpha=alpha, linesearch_iters=linesearch_iters, device=device)
     else:
         prox_term = torch.matmul(w.t(), y)
