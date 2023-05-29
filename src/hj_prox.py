@@ -7,9 +7,9 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
         The output estimates the proximal:
         
         $$
-            \mathsf{prox_{tf}(x) = argmin_y \ f(y) + \dfrac{1}{2t} \| y - x \|^2,}
+        \mathsf{prox_{tf}(x) = argmin_y \ f(y) + \dfrac{1}{2t} \| y - x \|^2,}
         $$
-            
+        
         where $\mathsf{x}$ = `x` is the input, $\mathsf{t}$=`t` is the time parameter, 
         and $\mathsf{f}$=`f` is the function of interest. The process for this is 
         as follows.
