@@ -36,6 +36,7 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             x (tensor): Input vector
             t (tensor): Time > 0
             f: Function to minimize
+            delta: (float, optional): Smoothing parameter
 
         Shape:
             - Input: :math:`(*, H_{in})`, where :math:`*` represents any number of
