@@ -1,8 +1,7 @@
 site_name: A Hamilton-Jacobi-based proximal operator
 site_description: A formula for estimating proximal operators from (possibly noisy) observations of objective function values
 
-extra_css:
-  - stylesheets/extra.css
+
  
 plugins:
   - mkdocstrings
@@ -14,6 +13,9 @@ plugins:
         fill: "#7086DF" 
         text: "#FFFFFF"
 
+extra_css:
+  - stylesheets/extra.css
+  
 theme:
   name: material
   logo: assets/logo-v3-light.png
@@ -22,8 +24,6 @@ theme:
     - content.code.annotation
     - content.code.copy
   language: en
-  palette:
-    - scheme: default 
   features:
     - navigation.tabs
     - navigation.tabs.sticky
