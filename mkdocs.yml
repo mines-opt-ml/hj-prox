@@ -1,4 +1,4 @@
-site_name: A Hamilton-Jacobi-based Proximal Operator
+site_name: A Hamilton-Jacobi-based proximal operator
 site_description: A formula for estimating proximal operators from (possibly noisy) observations of objective function values
 
 
