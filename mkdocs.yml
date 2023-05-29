@@ -89,7 +89,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-    - 'HJ Prox': 'index.md'
+    - 'Summary': 'index.md'
     - 'Core Function': 'hj-prox.md'
     - 'Experiments':
         - 'L1 + Least Squares': 'exp-l1-least-squares.ipynb'
