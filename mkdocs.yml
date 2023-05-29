@@ -23,7 +23,7 @@ theme:
     - content.code.copy
   language: en
   palette:
-    - scheme: slate 
+    - scheme: default 
   features:
     - navigation.tabs
     - navigation.tabs.sticky
