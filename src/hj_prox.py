@@ -43,10 +43,8 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             device (string, optional): Device on which to store variables
 
         Shape:
-            - Input: :math:`(*, H_{in})`, where :math:`*` represents any number of
-              dimensions (including none) and :math:`H_{in} = \text{in\_features}`.
-            - Output: :math:`(*, H_{out})`, where all but the last dimension
-              match the input shape and :math:`H_{out} = \text{out\_features}`.
+            - The input `x` is of size `(n, 1)` with `n` the dimension of the space of interest and 1 point is used.
+            - The output `prox_term` is also of size `(n, 1)`.
 
         Returns:
             prox_term (tensor): Estimate of the proximal of f at x
