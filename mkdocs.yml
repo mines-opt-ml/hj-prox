@@ -5,7 +5,6 @@ site_description: A formula for estimating proximal operators from (possibly noi
 plugins:
   - mkdocstrings
   - mkdocs-jupyter:
-      theme: light
       include_source: True
       include: ["*.ipynb"]
   - social:
