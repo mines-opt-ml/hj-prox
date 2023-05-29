@@ -45,7 +45,7 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
               match the input shape and :math:`H_{out} = \text{out\_features}`.
 
         Returns:
-            tensor: Estimate of the proximal of f at x
+            prox_term: (tensor): Estimate of the proximal of f at x
             
         Example:
             Examples can be given using either the ``Example`` or ``Examples``
