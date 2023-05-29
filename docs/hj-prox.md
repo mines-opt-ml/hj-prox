@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# compute_hj_prox
+# compute_prox
 
 ::: src.hj_prox.compute_prox
     options:
