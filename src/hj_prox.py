@@ -2,7 +2,7 @@ import numpy as np
 import torch
 
 def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_iters=0, device='cpu'):
-""" Estimate proximals from function value sampling via HJ-Prox Algorithm.
+        """ Estimate proximals from function value sampling via HJ-Prox Algorithm.
 
         The output estimates the proximal:
         
