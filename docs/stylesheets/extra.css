@@ -14,7 +14,7 @@
 }
 
 /* Light mode */
-[data-md-color-scheme="slate"] {
+[data-md-color-scheme="default"] {
 
   --md-primary-bg-color: #ffffff;
   --md-default-bg-color: #ffffff;
