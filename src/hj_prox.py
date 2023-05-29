@@ -35,7 +35,7 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
         Args:
             x (tensor): Input vector
             t (tensor): Time > 0
-            f: Function to minimize
+            f (Callable): Function to minimize
             delta (float, optional): Smoothing parameter
             int_samples (int, optional): Number of samples in Monte Carlo sampling for integral
             alpha (float, optional): Scaling parameter for sampling variance
@@ -58,36 +58,28 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
 
                 $ python example_google.py            
     """
-    assert(x.shape[1]==1)
-    assert(x.shape[0]>=1)
-    linesearch_iters +=1
-    standard_dev = np.sqrt(delta*t/alpha)
+    assert x.shape[1] == 1
+    assert x.shape[0] >= 1
     
+    linesearch_iters +=1
+    standard_dev = np.sqrt(delta * t / alpha)
     dim = x.shape[0]
     
-    y = standard_dev * torch.randn(int_samples, dim, device=device) + x.permute(1,0) # here y has shape (n_samples x dim)
-    
-    z = -f(y)*(alpha/delta) # shape =  n_samples
+    y = standard_dev * torch.randn(int_samples, dim, device=device) + x.permute(1,0) # y has shape (n_samples, dim)
+    z = -f(y)*(alpha/delta)     # shape =  n_samples
     w = torch.softmax(z, dim=0) # shape = n_samples 
     
-    softmax_overflow_check = (w < np.inf)
-    
-    
-    softmax_overflow_check = (w < np.inf)
-    if softmax_overflow_check.prod()==0.0:
-        print('x = ', x)
-        print('z = ', z)
-        print('w = ', w)
+    softmax_overflow = 1.0 - (w < np.inf).prod()
+    if softmax_overflow:
         alpha *= 0.5
-        return compute_prox(x, t, f, delta=delta, int_samples=int_samples, alpha=alpha, linesearch_iters=linesearch_iters, device=device)
+        return compute_prox(x, t, f, delta=delta, int_samples=int_samples, alpha=alpha,
+                            linesearch_iters=linesearch_iters, device=device)
     else:
         prox_term = torch.matmul(w.t(), y)
         prox_term = prox_term.view(-1,1)
     
-    prox_overflow = (prox_term < np.inf)
-    if prox_overflow.prod() == 0.0:
-        print('prox overflowed: ', prox_term)
-    assert(prox_overflow.prod() == 1.0)
-    envelope = f(prox_term.view(1,-1)) + (1/(2*t)) * torch.norm(prox_term - x.permute(1,0), p=2)**2
-    
+    prox_overflow = 1.0 - (prox_term < np.inf).prod()
+    assert not prox_overflow, "Prox Overflowed"
+
+    envelope = f(prox_term.view(1,-1)) + (1/(2*t)) * torch.norm(prox_term - x.permute(1,0), p=2)**2    
     return prox_term, linesearch_iters, envelope
