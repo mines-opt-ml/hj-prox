@@ -43,8 +43,8 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             device (string, optional): Device on which to store variables
 
         Shape:
-            - The input `x` is of size `(n, 1)` with `n` the dimension of the space of interest and 1 point is used.
-            - The output `prox_term` is also of size `(n, 1)`.
+            - Input `x` is of size `(n, 1)` where `n` is the dimension of the space of interest
+            - The output `prox_term` also has size `(n, 1)`
 
         Returns:
             prox_term (tensor): Estimate of the proximal of f at x
@@ -52,11 +52,16 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             envelope (tensor): Value of envelope function (i.e. infimal convolution) at proximal
             
         Example:
-            Examples can be given using either the ``Example`` or ``Examples``
-            sections. Sections support any reStructuredText formatting, including
-            literal blocks::
-
-                $ python example_google.py            
+            Below is an exmaple for estimating the proximal of the L1 norm. Note the function
+            must have inputs of size `(n_samples, n)'.
+            ```
+                def f(x):
+                    return torch.norm(x, dim=1, p=1) 
+                n = 3
+                x = torch.randn(n, 1)
+                t = 0.1
+                prox_term, _, _ = compute_prox(x, t, f, delta=1e-1, int_samples=100)   
+            ```
     """
     assert x.shape[1] == 1
     assert x.shape[0] >= 1
