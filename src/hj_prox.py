@@ -53,7 +53,7 @@ def compute_prox(x, t, f, delta=1e-1, int_samples=100, alpha=1.0, linesearch_ite
             
         Example:
             Below is an exmaple for estimating the proximal of the L1 norm. Note the function
-            must have inputs of size `(n_samples, n)'.
+            must have inputs of size `(n_samples, n)`.
             ```
                 def f(x):
                     return torch.norm(x, dim=1, p=1) 
