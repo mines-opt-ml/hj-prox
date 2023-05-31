@@ -5,6 +5,7 @@ extra_css:
   - stylesheets/extra.css
  
 plugins:
+  - search
   - mkdocstrings
   - mkdocs-jupyter:
       include_source: True
@@ -62,6 +63,10 @@ extra:
   analytics:
     provider: google
     property: G-8WCEEZSZ9B  
+
+# Github Repo
+repo_name: mint-opt-ml/hj-prox
+repo_url: https://github.com/mines-opt-ml/hj-prox
 
 
 markdown_extensions:
