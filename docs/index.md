@@ -13,9 +13,11 @@
     - [x] Evaluate function $\mathsf{f}$ at each point $\mathsf{y^i}$
     - [x] Estimate proximal by using softmax to combine the values for $\mathsf{f(y^i)}$ and $\mathsf{y^i}$
 
+<center>
 [Preprint :fontawesome-solid-file-lines:](assets/hj-prox-preprint.pdf){ .md-button .md-button--primary }
 [Reprint :fontawesome-solid-file-lines:](https://www.pnas.org/doi/10.1073/pnas.2220469120){ .md-button .md-button--primary }
 [Slides :fontawesome-solid-file-image:](assets/hj-prox-slides.pdf){ .md-button .md-button--primary }
+</center>
 
 <center>
     <img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="500"/>
@@ -38,3 +40,8 @@
              number={14}
     }
     ```
+
+
+<center>
+[Contact Us](https://form.jotform.com/TypalAcademy/contact-form){ .md-button .md-button--primary }
+</center>
