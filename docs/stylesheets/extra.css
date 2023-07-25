@@ -36,15 +36,15 @@
   --md-admonition-fg-color: var(--md-typeset-color);
   --md-admonition-bg-color: #e0e5f8;  
 
-    /* Primary color shades */
-    --md-primary-bg-color--light: var(--md-typeset-color);
-    --md-text-link-color:         var(--md-typeset-color);
+  /* Primary color shades */
+  --md-primary-bg-color--light: var(--md-typeset-color);
+  --md-text-link-color:         var(--md-typeset-color);
 
-    /* Accent color shades */
-    --md-accent-fg-color:             #7086DF;
-    --md-accent-fg-color--transparent: var(--md-typeset-color);
-    --md-accent-bg-color:              var(--md-typeset-color);
-    --md-accent-bg-color--light:       var(--md-typeset-color);   
+  /* Accent color shades */
+  --md-accent-fg-color:             #7086DF;
+  --md-accent-fg-color--transparent: var(--md-typeset-color);
+  --md-accent-bg-color:              var(--md-typeset-color);
+  --md-accent-bg-color--light:       var(--md-typeset-color);   
 
   /* Code block color shades */
   --md-code-bg-color: var(--md-admonition-bg-color);
@@ -53,8 +53,18 @@
   /* Header */
   --md-header-fg-color:       #ffffff; 
   --md-header-bg-color:       #ffffff; 
- 
-  .md-button {border-radius: 20px;}
+
+  /* Buttons */
+  .md-button {border-radius:      20px;
+              border-color:       #ffbc50;
+              color:               var(--md-primary-fg-color);
+              background-color:   #ffffff;
+             }
+  .md-button:hover {
+              border-radius:      20px;
+              color:              #ffffff;
+              background-color:   var(--md-primary-fg-color);
+             }
   
   /* Footer */
   --md-footer-bg-color:        var(--md-primary-fg-color);
