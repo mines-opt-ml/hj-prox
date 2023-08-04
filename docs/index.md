@@ -20,10 +20,12 @@
 </center>
 
 <center>
-    <img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="500"/>
-</center>
+<img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="500"/>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1_H2dXZsgHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+
+<iframe width="889" height="500" src="https://www.youtube.com/embed/1_H2dXZsgHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
 
 !!! abstract "Abstract"
 
