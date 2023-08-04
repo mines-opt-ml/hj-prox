@@ -1,4 +1,4 @@
-# A Hamilton-Jacobi-based proximal operator
+# A Hamilton-Jacobi-based Proximal Operator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Docs](https://github.com/mines-opt-ml/hj-prox/actions/workflows/ci.yml/badge.svg)
@@ -23,7 +23,7 @@
     <img src="assets/hj-prox-animation.gif" alt="HJ-Prox Animation" width="500"/>
 </center>
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/778967515?h=57c80f74a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Hamilton-Jacobi-based Proximal Operator"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1_H2dXZsgHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! abstract "Abstract"
 
