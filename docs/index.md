@@ -17,6 +17,7 @@
 [Preprint :fontawesome-solid-file-lines:](assets/hj-prox-preprint.pdf){ .md-button .md-button--primary }
 [Reprint :fontawesome-solid-file-lines:](https://www.pnas.org/doi/10.1073/pnas.2220469120){ .md-button .md-button--primary }
 [Slides :fontawesome-solid-file-image:](assets/hj-prox-slides.pdf){ .md-button .md-button--primary }
+[Code :octicons-code-16:](https://github.com/mines-opt-ml/hj-prox){ .md-button .md-button--primary }
 </center>
 
 <center>
