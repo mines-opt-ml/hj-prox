@@ -22,4 +22,4 @@ A Hamilton-Jacobi-based proximal operator ([arXiv Link](https://arxiv.org/abs/22
              number={14}
     }
 
-See the [documentation side](https://hj-prox.research.typal.academy) for more details.
+See the [documentation site](https://hj-prox.research.typal.academy) for more details.
